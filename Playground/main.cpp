@@ -13,14 +13,7 @@ int main(void)
 {
 	LOG("Playground");
 
-	Vector3 rVec = { 10.f, 10.f, 10.f };
-
-	std::vector<float> rMatrixVec;
-	while (rMatrixVec.size() < 16)
-	{
-		rMatrixVec.push_back(1337.f);
-	}
-
+	Vector3 rVec = { 1.f, 2.f, 3.f };
 	//
 	Timer<float, std::milli> rTimer;
 	//
@@ -28,16 +21,6 @@ int main(void)
 
 	while (true)
 	{
-		Matrix4x4 rMatrix(rMatrixVec);
-
-		for (int i = 0; i < 4; i++)
-		{
-			for (int j = 0; j < 4; j++)
-			{
-				LOG(rMatrix[i][j]);
-			}
-		}
-
 		rDeltaTime = rTimer.Elapsed();
 		rTimer.Reset();
 	}
