@@ -6,6 +6,7 @@ class Matrix4x4
 {
 public:
 	Matrix4x4(void);
+	Matrix4x4(std::vector<float> v);
 
 	static Matrix4x4 RotateX(float angle);
 	static Matrix4x4 RotateY(float angle);

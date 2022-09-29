@@ -17,6 +17,23 @@ Matrix4x4::Matrix4x4(void)
 	}
 }
 
+Matrix4x4::Matrix4x4(std::vector<float> v)
+{
+	if (v.size() != 16)
+		return;
+
+	unsigned int rCurr = 15;
+
+	for (unsigned int i = 4; i > 0; i--)
+	{
+		for (unsigned int j = 4; j > 0; j--)
+		{
+			m_Matrix[i - 1][j - 1] = v[rCurr];
+			rCurr--;
+		}
+	}
+}
+
 //
 //
 //
@@ -65,7 +82,7 @@ std::vector<float> Matrix4x4::ToVector(const Matrix4x4& m)
 {
 	std::vector<float> rVector;
 	//
-	int rCurr = 0;
+	unsigned int rCurr = 0;
 
 	for (unsigned int i = 0; i < 4; i++)
 	{
