@@ -1,12 +1,17 @@
 #pragma once
 
 #include <vector>
+#include <Vector/Vector3.hpp>
 
 class Matrix4x4
 {
 public:
 	Matrix4x4(void);
 	Matrix4x4(std::vector<float> v);
+
+	static Matrix4x4 Translate(Vector3 translation);
+
+	static Matrix4x4 Scale(Vector3 scale);
 
 	static Matrix4x4 RotateX(float angle);
 	static Matrix4x4 RotateY(float angle);
