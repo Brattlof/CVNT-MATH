@@ -125,12 +125,12 @@ float Vector3::Distance(Vector3 v)
 //
 //
 
-Vector3 Vector3::Lerp(Vector3 v1, Vector3 v2, float alpha)
+Vector3 Vector3::Lerp(const Vector3& v1, const Vector3& v2, float alpha)
 {
 	return (v1 * alpha) + (v2 * (1.f - alpha));
 }
 
-Vector3 Vector3::Lerp(Vector3 v, float alpha)
+Vector3 Vector3::Lerp(const Vector3& v, float alpha)
 {
 	return Lerp(*this, v, alpha);
 }
