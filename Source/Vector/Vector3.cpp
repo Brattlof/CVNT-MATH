@@ -22,7 +22,7 @@ float Vector3::Length(void)
 
 void Vector3::Normalize(void)
 {
-	*this /= 100;
+	*this /= Length();
 }
 
 Vector3 Vector3::Normalized(void)
