@@ -62,6 +62,11 @@ project "Playground"
 		"Playground/**.cpp"
 	}
 	
+	links
+	{
+		"Math"
+	}
+	
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
