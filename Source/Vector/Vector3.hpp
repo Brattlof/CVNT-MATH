@@ -6,7 +6,7 @@ class Vector3
 {
 public:
 	Vector3(float _x = 0.f, float _y = 0.f, float _z = 0.f) : x(_x), y(_y), z(_z) { }
-	Vector3(Vector3& v) { *this = v; }
+	Vector3(const Vector3& v) { *this = v; }
 	~Vector3() = default;
 
 	float LengthSqr(void);

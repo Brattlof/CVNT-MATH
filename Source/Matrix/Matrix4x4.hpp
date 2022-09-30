@@ -7,6 +7,7 @@ class Matrix4x4
 {
 public:
 	Matrix4x4(void);
+	Matrix4x4(const Matrix4x4& m) { *this = m; }
 	Matrix4x4(std::vector<float> v);
 
 	static Matrix4x4 Translate(Vector3 translation);
