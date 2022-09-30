@@ -26,6 +26,17 @@ public:
 	// -- Matrix4x4[i][j] -- //
 	float* operator[](unsigned int row) { return m_Matrix[row]; }
 
+	void operator*=(Matrix4x4& m)
+	{
+		for (unsigned int i = 0; i < 4; i++)
+		{
+			for (unsigned int j = 0; j < 4; j++)
+			{
+				m_Matrix[i][j] *= m.At(i, j);
+			}
+		}
+	}
+
 private:
 	float m_Matrix[4][4];
 };

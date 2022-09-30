@@ -1,6 +1,7 @@
 #include "pch.hpp"
 
 #include "Matrix4x4.hpp"
+#include <Windows.h>
 
 //
 //
@@ -8,13 +9,7 @@
 
 Matrix4x4::Matrix4x4(void)
 {
-	for (unsigned int i = 0; i < 4; i++)
-	{
-		for (unsigned int j = 0; j < 4; j++)
-		{
-			m_Matrix[i][j] = 0.f;
-		}
-	}
+	ZeroMemory(&m_Matrix, sizeof(m_Matrix));
 }
 
 Matrix4x4::Matrix4x4(std::vector<float> v)

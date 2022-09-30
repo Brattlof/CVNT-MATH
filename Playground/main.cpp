@@ -19,8 +19,6 @@ int main(void)
 	//
 	float rDeltaTime = 0.f;
 
-
-
 	while (true)
 	{
 		rDeltaTime = rTimer.Elapsed();
